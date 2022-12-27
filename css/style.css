@@ -1,0 +1,159 @@
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient( 120deg,#0099ff, #8f00c7);
+    background-size: 300%;
+    animation: bodybg 10s linear alternate-reverse infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Caveat', cursive;
+}
+@keyframes bodybg{
+    0%{
+        background-position: top left;
+    }
+    100%{
+        background-position: bottom right;
+    }
+}
+.box{
+    width: 100%;
+    max-width: 600px;
+    padding: 32px 16px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 16px black;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.box__management{
+    display: flex;
+}
+input{
+    flex-grow: 1;
+    border: 1px solid #8f00c7;
+    border-right: 0px;
+    border-radius: 6px 0 0 6px;
+    padding: 0 8px;
+    font-size: 24px;
+    transition: all 0.3s;
+}
+.box__management button{
+    width: 56px;
+    height: 56px;
+    border: 1px solid #8f00c7;
+    border-left: 0px;
+    background-color: #8f00c7;
+    color: white;
+    border-radius: 0 6px 6px 0;
+    transition: all 0.3s;
+}
+.box__management button:hover{
+    background-color: #0099ff;
+    border-color: #0099ff;
+    box-shadow: 8px 0 8px #0099ff;
+}
+input:focus{
+    border-color: #0099ff;
+    box-shadow: -8px 0 8px #0099ff;
+}
+h1{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+ul{
+    padding: 0;
+    max-height: 50vh;
+    overflow: auto;
+    padding-right: 4px;
+}
+ul::-webkit-scrollbar{
+    width: 4px;
+    padding: 4px;
+}
+ul::-webkit-scrollbar-thumb{
+    background-color: #8f00c7;
+    border-radius: 4px;
+}
+li{
+    font-size: 32px;
+    padding: 8px;
+    border-radius: 4px;
+}
+ul li:nth-child(even){
+    background-color: #0099ff8a;
+}
+.box__buttons{
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+.box__buttons button{
+    flex-grow: 1;
+    padding: 8px 0;
+    font-size: 32px;
+    border-radius: 4px;
+    background-color: #8f00c759;
+    transition: all 0.3s;
+    color: white;
+}
+.box__buttons button:hover{
+    background-color: #8f00c7;
+}
+span{
+    transform: scale(0, 1);
+    overflow: hidden;
+    display: inline-block;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+li:hover span{
+    transform: scale(1, 1);
+}
+.off{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
